@@ -1,0 +1,85 @@
+@keyframes dropdown {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(90px); } }
+.profile_image {
+  border-radius: 50%;
+  background-image: url("../assets/images/selfimg_1.jpg");
+  background-size: contain;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 1.5s;
+  display: block; }
+  .profile_image:hover {
+    transform: rotate(360deg); }
+  .profile_image:hover + .info {
+    display: block;
+    animation-name: dropdown;
+    animation-duration: 2s; }
+
+.self_img {
+  background-image: url("../assets/images/selfimg_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 300px;
+  background-position: center;
+  margin: 0 auto;
+  display: block; }
+
+.info {
+  display: none;
+  text-align: center;
+  transition: all 1s;
+  padding-top: 10px; }
+
+.jumbotron {
+  background: url("../assets/images/cover.jpg") top;
+  background-size: cover;
+  opacity: 0.9; }
+  .jumbotron .contain {
+    padding: 20px; }
+
+.edu-inf {
+  text-align: center; }
+  .edu-inf .divider {
+    border-left: 3px solid #222;
+    left: 8%; }
+
+.exp {
+  text-align: left; }
+
+.selfintro {
+  border-left: 2px;
+  border-left-style: solid;
+  border-color: #222; }
+
+a {
+  font-family: "Lucida Console", monospace; }
+
+p {
+  font-family: "Lucida Console", monospace;
+  font-size: 15px; }
+
+li {
+  font-family: "Lucida Console", monospace;
+  font-size: 15px;
+  padding: 5px; }
+
+h1 {
+  font-family: "Lucida Console", monospace; }
+
+h2 {
+  box-sizing: border-box;
+  font-family: "Lucida Console", monospace;
+  font-style: bold; }
+
+h3 {
+  font-family: "Lucida Console", monospace;
+  font-style: bold;
+  padding: 10px; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,106 @@
+
+// Variables
+$bluelight: #0499ff
+$white: #f7f5f0
+$black: #222
+$purple: #6633ff
+$font-stack: 'Lucida Console', monospace
+
+// Mixins
+
+=circleAvt($rad, $height, $width, $align)
+    border-radius:         $rad
+    background-image: url('../assets/images/selfimg_1.jpg')
+    background-size: contain
+    height: $height
+    width:  $width
+    margin: 0 auto
+    text-align: $align
+    
+=rectangleAvt($height, $width, $pos)
+    background-image: url('../assets/images/selfimg_2.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    height: $height
+    width: $width
+    background-position: $pos
+    margin: 0 auto
+    display: block
+    
+@keyframes dropdown
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(90px)
+    
+// Styles
+
+.profile_image
+    +circleAvt(50%, 150px, 150px, center) 
+    transition: all 1.5s
+    display: block
+    &:hover
+        transform: rotate(360deg) 
+    &:hover + .info
+        display: block
+        animation-name: dropdown
+        animation-duration: 2s
+
+.self_img
+    +rectangleAvt(400px, 300px, center)
+    
+.info
+    display: none    
+    text-align: center
+    transition: all 1s
+    padding-top: 10px
+    
+    
+    
+.jumbotron
+    background: url('../assets/images/cover.jpg') top
+    background-size: cover
+    opacity: 0.9
+    .contain
+        padding: 20px
+        
+.edu-inf
+    text-align: center
+    .divider
+        border-left: 3px solid $black
+        left: 8%
+        
+.exp
+    text-align: left
+
+.selfintro
+    border-left: 2px
+    border-left-style: solid
+    border-color: $black
+a
+    font-family: $font-stack
+p
+    font-family: $font-stack
+    font-size: 15px
+li
+    font-family: $font-stack
+    font-size: 15px
+    padding: 5px
+  
+h1
+    font-family: $font-stack
+    
+    
+h2
+    box-sizing: border-box
+    font-family: $font-stack
+    font-style: bold
+    
+h3
+    font-family: $font-stack
+    font-style: bold
+    padding: 10px
+
+    
+
+    
